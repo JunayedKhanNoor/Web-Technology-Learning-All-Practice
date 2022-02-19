@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buble</title>
+</head>
+<body>
+    <section id="sectionContainer">
+        <h4>Bubble List</h4>
+        <ul id="listContainer">
+            <li>Lorem, ipsum.</li>
+            <li id="secondItem">Excepturi, minus?</li>
+            <li>Aspernatur, at.</li>
+            <li>Quaerat, dignissimos!</li>
+            <li>Dolorem, dolore.</li>
+            <li>Excepturi, eius?</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('secondItem').addEventListener('click',function(event){
+            console.log("Second item clicked");
+            //ei stopPropagation ta event bubble off koira dibe, tobe same id k onno kothao event listener add kora thakle seita kal korbe
+            //event.stopPropagation();
+            //ei stopImmediatePropagation sob dhoroner propagation off kore dibe
+            event.stopImmediatePropagation();
+
+        })
+        document.getElementById('listContainer').addEventListener('click',function(){
+            console.log("UL clicked");
+        })
+        document.getElementById('sectionContainer').addEventListener('click',function(){
+            console.log("SectionContainer clicked");
+        })
+    </script>
+</body>
+</html>

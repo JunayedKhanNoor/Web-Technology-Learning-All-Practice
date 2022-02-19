@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>More Events</h2>
+    <section>
+        <h3 id="secret-info">Very very important secret information</h3>
+        <input id="delete-confirm" type="text" placeholder="please type delete">
+        <button id="delete-button" disabled>Delete</button>
+    </section>
+    <script>
+        document.getElementById('delete-button').addEventListener('click',function(){
+            document.getElementById('secret-info').style.display='none';
+        })
+        //focus, oi je text area tte click korle seta focus hoi
+        document.getElementById('delete-confirm').addEventListener('focus',function(){
+            document.body.style.backgroundColor = 'lightcoral';
+        })
+        //blur oi je text area r baire onno kothao click korle text area blur hoi
+        document.getElementById('delete-confirm').addEventListener('blur',function(){
+            document.body.style.backgroundColor = 'gray';
+        })
+        //==================egular kaj hoilo keyboard a ki likhi seita catch kora then segula use kora
+        //1.keydown
+        // document.getElementById('delete-confirm').addEventListener('keydown',function(){
+        //      const deleteField = document.getElementById('delete-confirm');
+        //    console.log(deleteField.value);
+        // })
+        //2.keypress
+        // document.getElementById('delete-confirm').addEventListener('keypress',function(){
+        //     const deleteField = document.getElementById('delete-confirm');
+        //     console.log(deleteField.value);
+        // })
+        //3.keyUp=============most of the time use hobe
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            //console.log(event.target.value);====== pura event ta dekhabe type korle
+            const deletbtn = document.getElementById('delete-button');
+            if (event.target.value=='delete'){
+                deletbtn.removeAttribute('disabled');
+            }
+            else{
+                deletbtn.setAttribute('disabled',true);
+            }
+        })
+        //change(oi je copy pest korle dhorte pare na keyup ei jonno change tha use korte house)
+        document.getElementById('delete-confirm').addEventListener('change',function(){
+            const deleteField = document.getElementById('delete-confirm');
+            console.log(deleteField.value);
+        })
+    </script>
+</body>
+</html>
