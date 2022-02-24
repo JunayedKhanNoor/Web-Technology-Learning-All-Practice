@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/57bf7b82c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      main {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 25px;
+      }
+      img {
+        position: relative;
+      }
+      #boy {
+        top: 160px;
+        z-index: 3;
+      }
+      #ring {
+        top: 120px;
+        z-index: 2;
+      }
+      #water {
+        top: 40px;
+        z-index: 1;
+      }
+      .stage {
+        height: 900px;
+        width: 1500px;
+        border: 4px solid springgreen;
+        background-color: gray;
+      }
+      @keyframes slider {
+        0% {
+          background-color: deepskyblue;
+          left: 0;
+        }
+        50% {
+          background-color: salmon;
+          top: 800px;
+        }
+        51% {
+          background-color: aqua;
+          top: 0px;
+          left: 700px;
+        }
+        52% {
+          background-color: salmon;
+          bottom: 800px;
+        }
+        100% {
+          left: 1400px;
+        }
+      }
+      .ball {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: relative;
+        background-color: deeppink;
+        animation: slider 5s ease 0.1s infinite alternate;
+        /* animation: slider 1s ease-in-out 0.5s infinite alternate ; */
+        animation-play-state: running;
+      }
+      .field {
+        height: 900px;
+        width: 1500px;
+        border: 4px solid springgreen;
+    
+      }
+      .bat{
+            transition: transform 1s ease-in;
+        }
+      .field:hover .bat{
+        transform: rotate(-30deg);
+        transform-origin: top right;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="one">
+        <p>
+          ১. একটা ordered লিস্ট বানাও সেখানে প্রথম আইটেম হবে মিনিমাম সাতটা
+          inline এলিমেন্ট এর নাম লিখবে। যদি নিজে নিজে মনে করতে না পারো। সমস্যা
+          নাই। গুগলে সার্চ দাও। তারপর সেগুলার নাম লিখে ফেলো। তোমার লিস্ট এর
+          মধ্যে সেকেন্ড আইটেম হিসেবে সাতটা block এলিমেন্ট এর নাম নিবে। চেষ্টা
+          করবে নিজে নিজে নামগুলো লিখতে। হয়তো দুই-তিনটা পারবে। তবে সেটা ব্যাপার
+          না। কারণ মুখস্ত করা তোমার উদ্দেশ্য না। তোমার উদ্দেশ্য হচ্ছে দরকার হলে
+          গুগলে সার্চ দিয়ে খুঁজে বের করতে পারো কিনা। সেই এবিলিটি ডেভেলপ করা। আর
+          তোমার লিস্টে লাষ্ট যে কাজ করবে সেটা হচ্ছে। মিনিমাম দুইটা inline-block
+          এলিমেন্ট এর নাম লিখবে। যদি কোন inline-block এলিমেন্ট এর কথা মনে করতে
+          না পারো। তাহলে html default inline-block elements লিখে গুগলে সার্চ
+          দিবে। তোমাকে স্ট্যাকওভারফ্লো এর একটা লিংক এ নিয়ে যাবে। সেখান এ বিভিন্ন
+          উত্তর পড়ে কিছুটা শিখবে কিছুটা কনফিউজড হয়ে যাবে। তারপরেও দেখো যেটা
+          দরকার সেটা বের করে নিয়ে আসতে পারো কিনা।
+        </p>
+        <h3>List of inline elements:</h3>
+
+        <ol>
+          <li>span</li>
+          <li>a</li>
+          <li>input</li>
+          <li>img</li>
+          <li>b</li>
+          <li>em</li>
+          <li>br</li>
+          <li>small</li>
+        </ol>
+        <h3>List of block elements:</h3>
+        <ol>
+          <li>p</li>
+          <li>section</li>
+          <li>div</li>
+          <li>footer</li>
+          <li>form</li>
+          <li>article</li>
+          <li>video</li>
+          <li>h1-6</li>
+        </ol>
+      </section>
+      <section class="two">
+        <p>
+          ২. ৫_৫-৫ ভিডিও এর যে উদাহরণ দেখানো হয়েছে সেটা আরেকবার প্রাকটিস করে
+          ফেলো।
+        </p>
+        <div><img id="boy" src="images/boy.svg" alt="" /></div>
+        <div><img id="ring" src="images/ring.svg" alt="" /></div>
+        <div><img id="water" src="images/water.svg" alt="" /></div>
+      </section>
+      <section>
+        <h4>
+          Go to my Facebook:
+          <a target="_blank" href="https://www.facebook.com/junayed.noor"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <h4>
+            Go to my Fav Youtube:
+            <a href="https://www.youtube.com/c/Freecodecamp"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </h4>
+        </h4>
+      </section>
+      <section>
+        <div class="stage">
+          <div class="ball"></div>
+        </div>
+      </section>
+      <section>
+        <div class="field">
+          <img class="bat" src="images/bat.png" alt="">
+          <div class="b">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

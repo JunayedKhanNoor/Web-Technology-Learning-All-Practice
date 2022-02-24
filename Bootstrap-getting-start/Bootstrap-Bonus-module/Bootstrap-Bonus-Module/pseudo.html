@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        blockquote::before{
+            content: open-quote;
+            font-size: 1.5em;
+            color: brown;
+        }
+        blockquote::after{
+            content: close-quote;
+            font-size: 1.5em;
+            color: brown;
+        }
+        .section-title::after{
+            content: '';
+            display: block;
+            color: chartreuse;
+            height: 2px;
+            width: 100%;
+        }
+        
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: '';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+        .my-title{
+            display: inline-block;
+        }
+        .my-title::after{
+            content: '';
+            display: block;
+            background-color: lawngreen;
+            height: 2px;
+            width: 100%;
+
+        }
+        input:required+label:after{
+            content: '*';
+        }
+    </style>
+</head>
+<body>
+    <h1 class="my-title">Best Quote</h1>
+    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem iure nihil hic molestiae deleniti ratione?</blockquote>
+    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eos itaque non cum id. Earum quae quaerat cumque aspernatur pariatur. Laboriosam quas aliquam eligendi id veritatis iste porro sequi dignissimos.</blockquote>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>Patience, persistence and perspiration make an unbeatable combination for success</blockquote>
+        <blockquote>Desire is the starting point of all achievement, not a hope, not a wish, but a keen pulsating desire
+            which transcends everything</blockquote>
+        <blockquote>Strength and growth come only through continuous effort and struggle</blockquote>
+    </section>
+    <form action="">
+        <input type="text">
+        <br>
+        
+        <input type="email" required>
+        <label for="email">Email</label>
+    </form>
+</body>
+</html>

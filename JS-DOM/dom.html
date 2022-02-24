@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="Blogs" class="blogs">
+      <header>
+        <h2>Blogs List</h2>
+        <ul id="list">
+          <li>Blog-3</li>
+          <li>Blog-2</li>
+          <li>Blog-1</li>
+        </ul>
+      </header>
+      <article class="blog">
+        <h1 id="titleOne">My Awsome Blog-1</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima hic
+          eius corrupti laborum maiores, consequuntur at et optio provident
+          asperiores voluptas! Eveniet cum suscipit voluptate ratione id odio.
+          Eum, possimus.
+        </p>
+      </article>
+      <article id="secondBlog" class="blog">
+        <h1>My Awsome Blog-2</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolor
+          omnis rem, laudantium laborum, nulla sit harum molestiae officia
+          dolores perspiciatis, ipsam id dicta illum quisquam corporis unde?
+          Facere, numquam.
+        </p>
+      </article>
+      <article class="blog">
+        <h1 id="titleThree">My Awsome Blog-3</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+          dolorum cum tenetur eos ea consequuntur doloremque placeat, earum
+          ipsum numquam corrupti, magni iure sit perspiciatis eligendi soluta
+          dignissimos illo? Esse.
+        </p>
+      </article>
+    </section>
+    <script>
+      const student = { name: "Junayed", age: 23 };
+      //console.log(document.body);
+      const blogTitles = document.getElementsByTagName("h1");
+      for (const blog of blogTitles) {
+        //console.log(blog.innerText);
+      }
+      const firstTitle = document.getElementById("titleOne");
+      firstTitle.style.textAlign = "center";
+      const thirdTitle = document.getElementById("titleThree");
+      thirdTitle.innerText = "Changed by JS";
+      thirdTitle.style.backgroundColor = "salmon";
+      thirdTitle.style.textAlign = "center";
+
+      //create and add element using JavaScript
+      //create element
+      const li = document.createElement("li");
+      li.innerText = "Blog-5";
+      //where to add
+      const ul = document.getElementById("list");
+      //append
+      ul.appendChild(li);
+      //add article
+      const article = document.createElement("article");
+      //add Class
+      article.classList.add("blog");
+      
+    //   const h3 = document.createElement("h3");
+    //   h3.innerText = "My Awesome Blog-5";
+    //   const p = document.createElement("p");
+    //   p.innerText = "Hello Bangladesh.This is created By JavaScript";
+    //   article.appendChild(h3);
+    //   article.appendChild(p);
+    article.innerHTML = `
+    <h3>My Awesome Blog-5</h3>
+    <p>Kono Golpo Nai</p>
+    `
+      //selecting parent of article
+      const articleParent = document.getElementById("Blogs");
+      articleParent.appendChild(article);
+
+      //get element by class
+      const blogs = document.getElementsByClassName("blog");
+      for (const blog of blogs) {
+        //console.log(blog);
+        blog.style.border = "2px solid orange";
+        blog.style.borderRadius = "20px";
+        blog.style.margin = "10px";
+        blog.style.padding = "10px";
+      }
+    </script>
+  </body>
+</html>

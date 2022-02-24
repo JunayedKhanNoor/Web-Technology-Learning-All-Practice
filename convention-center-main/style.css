@@ -1,0 +1,36 @@
+.myBadge {
+  top: -15px;
+  right: 20px;
+  width: 70px;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.package-btn {
+  background-color: #ffeffa;
+  border-radius: 15px;
+}
+.special-package {
+  background-color: #3f87f5 !important;
+  color: #ffffff !important;
+  box-shadow: 0px 42px 34px rgba(63, 135, 245, 0.25) !important;
+  border-radius: 26px;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.hot {
+  top: -15px;
+  right: 20px;
+  width: 70px;
+  font-size: 20px;
+}
+/* Carousel Image Responsive  */
+@media only screen and (max-width: 688px) {
+  .myCrsl img {
+    height: 500px;
+  }
+  .myFooter{
+      display: flex;
+      flex-direction: column;
+      justify-content: center !important;
+  }
+}
