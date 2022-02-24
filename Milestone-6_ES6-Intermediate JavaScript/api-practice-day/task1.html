@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task One</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/task1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="text-center my-3 p-3 shadow-lg bg-body rounded">
+        <h1 class="text-primary">Task 1:</h1>
+        <h3>
+          "একদম প্রাথমিক স্টেপ হিসেবে jsonplaceholder এর ওয়েবসাইট থেকে ডাটা
+          fetch করে সেটাকে কনসোল এ দেখাতে হবে। ধরো তুমি তাদের ওয়েবসাইট এ
+          comments এর API এর লিংক কোনটা সেটা জাভাস্ক্রিপ্ট দিয়ে কোড করে সেই ডাটা
+          কনসোল এ দেখতে পারতেছো কিনা। "
+        </h3>
+        <h1 class="text-success">Task 1 Done</h1>
+        <h1 class="text-primary">Task 2:</h1>
+        <h3>
+          "যে কমেন্ট এর ডাটাগুলো কনসোল এ দেখাতে পারছো। সেগুলা আবার তুমি html এ
+          দেখাতে পারতেছো কিনা। একটা সিস্টেম হবে তোমার একটা বাটন। থাকবে সেটাতে
+          ক্লিক করলে ডাটা লোড হবে। তারপর সেই ডাটা তুমি ওয়েবসাইট এ দেখাবে। "
+        </h3>
+        <h1 class="text-success">Task 2 Done</h1>
+        <h1 class="text-primary">Task 3:</h1>
+        <h3>
+          আরেকটা সিস্টেম হবে। তুমি যে ডাটা লোড করেছো। সেটা কোন বাটনে ক্লিক
+          করা লাগবে না। ওয়েবসাইট লোড হলেই সরাসরি ডাটা লোড হয়ে তারপর সেই ডাটা
+          ওয়েবসাইট এ দেখাবে। চেষ্টা করবে লোড করা ডাটা এর দুইটা প্রপার্টি অবশ্যই
+          দেখাবে। 
+        </h3>
+        <h1 class="text-primary">Task 4:</h1>
+        <h3>
+            তুমি যে ডাটা লোড করেছো। বা ডাটা ওয়েবসাইট এ দেখাচ্ছ। সেই কোড
+            এর মধ্যে arrow ফাংশন ইউজ করতে পারতেছো কিনা। যখন লুপ চালাচ্ছ সেখানে
+            forEach ইউজ করতে পারতেছো কিনা।
+        </h3>
+        <h1 class="text-success">Task 3 & 4 Done</h1>
+        <button
+          onclick="loadComments()"
+          type="button"
+          class="btn btn-primary my-3"
+        >
+          Show Comment Data
+        </button>
+      </div>
+    </header>
+    <section class="container d-flex">
+      <div id="id-continer">
+        <ul id="id-list"></ul>
+      </div>
+      <div id="name-continer">
+        <ul id="name-list"></ul>
+      </div>
+      <div id="email-container">
+        <ul id="email-list"></ul>
+      </div>
+    </section>
+
+    <script src="JS/task1.js"></script>
+  </body>
+</html>
