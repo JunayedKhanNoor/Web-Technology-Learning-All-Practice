@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+      <div class="card text-center">
+        <div class="card-header">
+          Save Input in Local Storage 
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special Product</h5>
+          <!-- <p class="card-text">Save it to browser's Local Storage.</p> -->
+          <div class="input-group mb-3 w-75 m-auto">
+            <input id="name" type="text" class="form-control" placeholder="Product Name">
+            <input id="price" type="text" class="form-control" placeholder="Price" >
+            <button onclick="addItem()" class="btn btn-primary " type="button" id="button-addon2">Add to Cart</button>
+          </div>
+          <div class="card m-auto" style="width: 18rem;">
+            <div class="card-header">
+              Your Cart
+            </div>
+            <ul id="list" class="list-group list-group-flush">
+              <!-- <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li> -->
+            </ul>
+          </div>
+         <a onclick="clearCart()" id="clear-cart" href="#" class="btn btn-primary my-2">Clear Cart</a> 
+        </div>
+        <div class="card-footer text-muted">
+         
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="localstorage.js"></script>
+</body>
+</html>
